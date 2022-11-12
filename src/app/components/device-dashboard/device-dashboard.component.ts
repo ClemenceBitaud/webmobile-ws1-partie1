@@ -5,7 +5,7 @@ import {Device} from "../../model/device";
 import {MatTable} from "@angular/material/table";
 import {MatDialog} from "@angular/material/dialog";
 import {AddEditDevicesDialogComponent} from "../add-edit-devices-dialog/add-edit-devices-dialog.component";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../model/user";
 
 @Component({
@@ -21,7 +21,8 @@ export class DeviceDashboardComponent implements OnInit {
   user!: User;
 
   constructor(public dialog: MatDialog,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private router: Router) {
     this.devices = devices.devices;
     const userId = this.route.snapshot.paramMap.get('id');
     if (userId !== null){
@@ -46,7 +47,6 @@ export class DeviceDashboardComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       device.name = result;
-      console.log(device);
       this.table.renderRows();
     })
   }
@@ -63,8 +63,12 @@ export class DeviceDashboardComponent implements OnInit {
     })
   }
 
-  manageUser(){}
+  manageUser(){
+    this.router.navigate(['user-dashboard', this.route.snapshot.paramMap.get('id')]);
+  }
 
-  manageAdmin(){}
+  manageAdmin(){
+    this.router.navigate(['admin-dashboard', this.route.snapshot.paramMap.get('id')]);
+  }
 
 }

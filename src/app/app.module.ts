@@ -13,13 +13,21 @@ import { AddEditDevicesDialogComponent } from './components/add-edit-devices-dia
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddEditUsersDialogComponent } from './components/add-edit-users-dialog/add-edit-users-dialog.component';
+import {MatIconModule} from "@angular/material/icon";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DeviceDashboardComponent,
-    AddEditDevicesDialogComponent
+    AddEditDevicesDialogComponent,
+    UserDashboardComponent,
+    AdminDashboardComponent,
+    AddEditUsersDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,9 @@ import {MatInputModule} from "@angular/material/input";
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

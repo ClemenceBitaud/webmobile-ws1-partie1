@@ -1,0 +1,33 @@
+<div mat-dialog-content style="display: flex; justify-content: center; flex-direction: column">
+  <mat-form-field appearance="fill">
+    <input placeholder="Name" matInput [(ngModel)]="user.name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input placeholder="Firstname" matInput [(ngModel)]="user.firstname">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input placeholder="identifiant" matInput [(ngModel)]="user.identifier">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input placeholder="Password" matInput [(ngModel)]="user.password">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select a role</mat-label>
+    <mat-select [(ngModel)]="user.role">
+      <mat-option value="user">User</mat-option>
+      <mat-option value="admin">Admin</mat-option>
+      <mat-option value="superadmin">Super Admin</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select an access</mat-label>
+    <mat-select [(ngModel)]="user.access">
+      <mat-option value="read only">Read Only</mat-option>
+      <mat-option value="edit">Edit</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="user">Ok</button>
+</div>

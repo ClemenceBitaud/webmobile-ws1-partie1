@@ -1,6 +1,6 @@
 <div style="display:flex;justify-content: center; margin: 20px">
-  <button color="primary" mat-raised-button (click)="manageUser()" >Manage User</button>
-  <button color="primary" mat-raised-button (click)="manageAdmin()" >Manage Admin</button>
+  <button *ngIf="user.role !== 'user'" color="primary" mat-raised-button (click)="manageUser()" >Manage User</button>
+  <button *ngIf="user.role === 'superadmin'" color="primary" mat-raised-button (click)="manageAdmin()" >Manage Admin</button>
 </div>
 <div style="margin: 10px">
   <h1>Gestion des devices</h1>
@@ -17,8 +17,8 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell  *matHeaderCellDef > Actions </th>
       <td mat-cell *matCellDef="let device; let j = index;" >
-        <button *ngIf="user.access !== 'read only'" mat-button (click)="openEdit(device)" >Edit</button>
-        <button *ngIf="user.access !== 'read only'" mat-button (click)="deleteDevice(j)">Delete</button>
+        <button color="primary" *ngIf="user.access !== 'read only'" mat-raised-button (click)="openEdit(device)" >Edit</button>
+        <button color="warn" *ngIf="user.access !== 'read only'" mat-raised-button (click)="deleteDevice(j)">Delete</button>
       </td>
     </ng-container>
 
