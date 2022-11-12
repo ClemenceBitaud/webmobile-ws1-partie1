@@ -2,10 +2,10 @@
   <h1>Connectez-vous</h1>
   <div style="display: flex; flex-direction: column; width: 30%">
     <mat-form-field appearance="fill">
-      <input matInput type="text" [(ngModel)]="identifier">
+      <input placeholder="Identifier" matInput type="text" [(ngModel)]="identifier">
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <input matInput type="password" [(ngModel)]="password">
+      <input placeholder="Password" matInput type="password" [(ngModel)]="password">
     </mat-form-field>
     <button color="primary" mat-raised-button (click)="login()">Valider</button>
   </div>
