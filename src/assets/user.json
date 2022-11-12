@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dupont",
+      "firstname": "Toto",
+      "identifier": "user1",
+      "password": "user1",
+      "role": "user",
+      "access" : "edit"
+    },
+    {
+      "id": 2,
+      "name": "Dupont",
+      "firstname": "Titi",
+      "identifier": "admin1",
+      "password": "admin1",
+      "role": "admin",
+      "access" : "edit"
+    },
+    {
+      "id": 3,
+      "name": "Dupont",
+      "firstname": "Tata",
+      "identifier": "superadmin1",
+      "password": "superadmin1",
+      "role": "superadmin",
+      "access" : "edit"
+    },
+    {
+      "id": 4,
+      "name": "Martin",
+      "firstname": "Titi",
+      "identifier": "user2",
+      "password": "user2",
+      "role": "user",
+      "access" : "read only"
+    }
+  ]
+}
