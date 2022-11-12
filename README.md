@@ -1,27 +1,29 @@
 # WebmobileWs1Partie1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+App disponible à ce lien : https://webmobile-ws1-partie1.herokuapp.com/login
 
-## Development server
+## Accès
+**User Read only**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Identifier : user2
 
-## Code scaffolding
+Password: user2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**User Edit**
 
-## Build
+Identifier : user1
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Password : user1
 
-## Running unit tests
+**Admin**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Identifier : admin1
 
-## Running end-to-end tests
+Password : admin1
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Super admin**
 
-## Further help
+Identifier : superadmin1
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Password : superadmin1
+
